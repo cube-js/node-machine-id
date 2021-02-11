@@ -1,6 +1,6 @@
 {
   "name": "@cubejs-backend/machine-id",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "main": "./dist/index.js",
   "types": "./types/index.d.ts",
   "description": "Unique machine (desktop) id (no admin privileges required).",
