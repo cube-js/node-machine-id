@@ -7,7 +7,7 @@ on:
       - 'v*.*.*-*'
 
 jobs:
-  npm:
+  release:
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
@@ -22,6 +22,8 @@ jobs:
         uses: borales/actions-yarn@v2.3.0
         with:
           cmd: install --frozen-lockfile
+      - name: Build
+        run: npm run build
       - name: Set NPM token
         run: echo //registry.npmjs.org/:_authToken=$NPM_TOKEN > ~/.npmrc
         env:
